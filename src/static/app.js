@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
+          <p><strong>Participants:</strong></p>
+          <ul style="margin-left: 20px; margin-bottom: 10px;">
+            ${details.participants.map(email => `<li>${email}</li>`).join('')}
+          </ul>
         `;
 
         activitiesList.appendChild(activityCard);
