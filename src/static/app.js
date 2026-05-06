@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
           <p><strong>Participants:</strong></p>
-          <div class="participants-list" style="margin-left: 20px; margin-bottom: 10px;">
-            ${details.participants.map(email => `<div class="participant" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;"><span>${email}</span><button class="delete-btn" data-email="${email}" data-activity="${name}" style="background: none; border: none; color: red; cursor: pointer; font-size: 18px;">×</button></div>`).join('')}
+          <div class="participants-list">
+            ${details.participants.map(email => `<div class="participant"><span>${email}</span><button class="delete-btn" data-email="${email}" data-activity="${name}">×</button></div>`).join('')}
           </div>
         `;
 
